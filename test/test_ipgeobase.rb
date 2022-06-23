@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "test_helper"
-require 'ipgeobase'
+require "ipgeobase"
 
 class TestIpgeobase < Minitest::Test
   def setup
@@ -21,17 +21,15 @@ class TestIpgeobase < Minitest::Test
     <as>AS31224 PJSC MegaFon</as>
     <query>83.169.216.199</query>
     </query>'
-    
     @expected = HappyMapper.parse(@response_ip_api)
-    stub_request(:get, "http://ip-api.com/xml/83.169.216.199")
-              .to_return(body: @response_ip_api)
+    stub_request(:get, "http://ip-api.com/xml/83.169.216.199").to_return(body: @response_ip_api)
   end
 
   def test_module_return_correct_data
-    result = Ipgeobase.lookup('83.169.216.199')
+    result = Ipgeobase.lookup("83.169.216.199")
     assert result.city == @expected.city
     assert result.country == @expected.country
-    assert result.countryCode == @expected.country_code
+    assert result.country_code == @expected.country_code
     assert result.lat == @expected.lat
     assert result.lon == @expected.lon
   end

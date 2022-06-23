@@ -12,7 +12,6 @@ Gem::Specification.new do |spec|
   spec.description = "Gem, which allows to take geo-information just by passing IP."
   spec.homepage = "https://github.com/tre3p/ipgeobase"
   spec.required_ruby_version = ">= 2.6.0"
-  
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/tre3p/ipgeobase"
   spec.metadata["changelog_uri"] = "https://github.com/tre3p/ipgeobase"

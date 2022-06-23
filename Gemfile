@@ -13,6 +13,6 @@ gem "rubocop", "~> 1.21"
 
 gem "http"
 
-gem 'nokogiri-happymapper'
+gem "nokogiri-happymapper"
 
 gem "webmock"
